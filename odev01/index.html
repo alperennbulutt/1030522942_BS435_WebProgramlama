@@ -8,15 +8,27 @@
   </head>
   <body>
     <h2>Kedi Bulmaca</h2>
-    <img id="img0" class="kart" src="img0.jpeg" onclick="onClickListener() " />
-    <img id="img1" class="kart" src="img1.jpeg" onclick="onClickListener()" />
-    <img id="img2" class="kart" src="img2.jpeg" onclick="onClickListener()" />
+
+    <p>Kartların birinde kedi vardır. Kediyi bulmanız gerekmektedir.</p>
+
+    <img id="img0" class="kart" src="img0.jpeg" onclick="sec(0)" />
+    <img id="img1" class="kart" src="img1.jpeg" onclick="sec(1)" />
+    <img id="img2" class="kart" src="img2.png" onclick="sec(2)" />
 
     <div class="mesaj">
-      <p id="alanId" onclick="onClickListener()">Sonuç burada yazacak</p>
-      <p id="kazandiId" style="display: none"></p>
-
-      <p id="yenildiId" style="display: none"></p>
+      <p id="alanId">Lütfen bir kartın üzerine tıklayınız.</p>
+      <p id="kazandiId" style="display: none">
+        Kazandınız tebrikler! Yeniden oynamak için
+        <span onclick="yeniden()" class="link">buraya</span> tıklayabilirsin.
+      </p>
+      <p id="yenildiId" style="display: none">
+        Kaybettiniz :( Yeniden oynamak için
+        <span onclick="yeniden()" class="link">buraya</span> tıklayabilirsin.
+      </p>
     </div>
+
+    <script>
+      yeniden();
+    </script>
   </body>
 </html>
